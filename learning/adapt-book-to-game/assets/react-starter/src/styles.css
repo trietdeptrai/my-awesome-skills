@@ -1,0 +1,117 @@
+:root {
+  color: #181815;
+  background: #d9d4ca;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --paper: #f3efe5;
+  --ink: #181815;
+  --muted: #68645c;
+  --rule: #bdb6a8;
+  --accent: #d7ff49;
+  --good: #285f4a;
+  --try: #8a3b28;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--paper); }
+button { color: inherit; font: inherit; }
+button:focus-visible { outline: 3px solid #315bff; outline-offset: 3px; }
+
+.eyebrow {
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .11em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.intro-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .72fr);
+  min-height: 100svh;
+}
+
+.intro-panel { align-content: center; display: grid; padding: clamp(2rem, 8vw, 8rem); }
+.intro-panel h1, .completion-card h1, .quest-card h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 8vw, 7.5rem);
+  font-weight: 400;
+  letter-spacing: -.055em;
+  line-height: .92;
+  margin: 1rem 0;
+}
+.lede { color: var(--muted); font-size: clamp(1.1rem, 2vw, 1.5rem); line-height: 1.55; max-width: 42rem; }
+.facts { border-bottom: 1px solid var(--rule); border-top: 1px solid var(--rule); display: flex; margin: 2rem 0; }
+.facts div { border-right: 1px solid var(--rule); display: grid; gap: .4rem; min-width: 8rem; padding: 1rem; }
+.facts dt { color: var(--muted); font-size: .72rem; text-transform: uppercase; }
+.facts dd { font-weight: 800; margin: 0; }
+.source-note { color: var(--muted); font-size: .8rem; line-height: 1.5; margin-top: 2rem; max-width: 42rem; }
+.intro-mark { align-content: center; background: var(--ink); color: var(--paper); display: grid; overflow: hidden; padding: 3rem; }
+.intro-mark span { border-bottom: 1px solid #555; font-family: Georgia, serif; font-size: clamp(3rem, 7vw, 7rem); letter-spacing: -.05em; padding: .2em 0; }
+
+.primary, .secondary {
+  align-items: center;
+  border: 1px solid var(--ink);
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 800;
+  justify-content: center;
+  min-height: 50px;
+  padding: .9rem 1.2rem;
+  width: fit-content;
+}
+.primary { background: var(--accent); }
+.secondary { background: transparent; }
+
+.game-shell { min-height: 100svh; }
+.game-header { align-items: center; border-bottom: 1px solid var(--ink); display: grid; grid-template-columns: 1fr auto minmax(120px, 18vw); min-height: 72px; padding: 0 clamp(1rem, 4vw, 4rem); }
+.wordmark { background: none; border: 0; cursor: pointer; font-weight: 900; justify-self: start; padding: .75rem 0; }
+.progress-copy { display: flex; font-size: .75rem; gap: .75rem; text-transform: uppercase; }
+.progress-track { background: #d5cfc2; height: 8px; margin-left: 1rem; overflow: hidden; }
+.progress-track span { background: var(--ink); display: block; height: 100%; transition: width 240ms ease; }
+.quest-layout { display: grid; grid-template-columns: minmax(220px, .34fr) minmax(0, 1fr); min-height: calc(100svh - 73px); }
+.quest-index { border-right: 1px solid var(--ink); padding: clamp(1.5rem, 4vw, 4rem); }
+.quest-index ol { list-style: none; margin: 2rem 0 0; padding: 0; }
+.quest-index li { border-top: 1px solid var(--rule); color: var(--muted); display: grid; gap: .5rem; padding: 1rem 0; }
+.quest-index li.current { color: var(--ink); }
+.quest-index li span { font-size: .7rem; }
+.quest-card { margin: 0 auto; max-width: 920px; padding: clamp(2rem, 7vw, 7rem); width: 100%; }
+.quest-card h1 { font-size: clamp(3rem, 6vw, 6rem); }
+.setup { font-size: clamp(1.1rem, 2vw, 1.35rem); line-height: 1.6; max-width: 52rem; }
+.clue { background: #e8e2d5; border-left: 5px solid var(--ink); line-height: 1.5; padding: 1rem; }
+.choices { display: grid; gap: .7rem; margin: 2rem 0; }
+.choice { align-items: center; background: transparent; border: 1px solid var(--ink); cursor: pointer; display: flex; font-weight: 700; gap: 2rem; justify-content: space-between; min-height: 58px; padding: 1rem; text-align: left; }
+.choice:hover, .choice.selected { background: #fffdf7; }
+.feedback { border-top: 1px solid var(--rule); min-height: 100px; padding: 1rem 0; }
+.feedback > span { color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.feedback p { line-height: 1.55; }
+.feedback.good { color: var(--good); }
+.feedback.try { color: var(--try); }
+.takeaway { background: var(--ink); color: white; margin-top: 1rem; padding: 1.5rem; }
+.takeaway .eyebrow { color: var(--accent); }
+.takeaway p { font-family: Georgia, serif; font-size: 1.35rem; line-height: 1.4; }
+.completion-shell { align-items: center; background: var(--ink); color: white; display: grid; min-height: 100svh; padding: clamp(2rem, 8vw, 8rem); }
+.completion-card { max-width: 900px; }
+.completion-card .eyebrow { color: var(--accent); }
+.completion-card h1 { font-size: clamp(3rem, 8vw, 7rem); }
+.journal { border-top: 1px solid #555; padding-left: 1.5rem; }
+.journal li { border-bottom: 1px solid #555; font-family: Georgia, serif; font-size: 1.15rem; line-height: 1.5; padding: 1rem; }
+.completion-card .secondary { border-color: white; color: white; margin-top: 2rem; }
+
+@media (max-width: 760px) {
+  .intro-shell, .quest-layout { grid-template-columns: 1fr; }
+  .intro-mark { min-height: 38svh; }
+  .game-header { grid-template-columns: 1fr auto; }
+  .progress-track { grid-column: 1 / -1; margin: 0 0 1rem; }
+  .quest-index { border-bottom: 1px solid var(--ink); border-right: 0; padding: 1.25rem; }
+  .quest-index ol { display: flex; gap: .5rem; margin-top: 1rem; overflow-x: auto; }
+  .quest-index li { min-width: 150px; }
+  .quest-card { padding: 2rem 1.25rem 4rem; }
+  .facts { flex-wrap: wrap; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}

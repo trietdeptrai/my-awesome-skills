@@ -1,0 +1,4 @@
+interface:
+  display_name: "Adapt Book to Game"
+  short_description: "Turn books into thoughtful playable web games"
+  default_prompt: "Use $adapt-book-to-game to turn my book into a playable learning game."
