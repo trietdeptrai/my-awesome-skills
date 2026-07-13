@@ -1,6 +1,6 @@
 # My Awesome Skills
 
-A personal collection of reusable Codex skills organized by everyday purpose.
+A personal collection of reusable skills organized by everyday purpose.
 
 ## Categories
 
