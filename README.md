@@ -18,6 +18,7 @@ ln -s "$PWD/learning/adapt-book-to-game" "$HOME/.codex/skills/adapt-book-to-game
 
 - `creative/frontend-design` — build polished, production-grade frontend interfaces with a restrained, minimalist visual language.
 - `learning/adapt-book-to-game` — turn a supplied fiction or nonfiction book into an original, accessible browser game through staged approval, implementation, and testing.
+- `productivity/commit-major-decisions` — automatically create scoped local Git commits after approved, implemented, and verified major decisions.
 
 ## Useful, not skills
 
